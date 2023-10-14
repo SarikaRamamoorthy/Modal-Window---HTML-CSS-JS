@@ -5,8 +5,10 @@ const openWindow = document.querySelectorAll('.window');
 const close = document.querySelector('.closebutton');
 const overlay = document.querySelector('.overlay');
 const popup = document.querySelector('.popup');
+const sound = document.querySelector('.sound');
 
 const openModal = function(){
+    sound.play();
     popup.classList.remove('hidden');
     overlay.classList.remove('hidden');
 };
@@ -16,6 +18,7 @@ for(let i=0;i<openWindow.length;i++){
 }
 
 const closeModal = function(){
+    sound.play();
     popup.classList.add('hidden');
     overlay.classList.add('hidden');
 };
